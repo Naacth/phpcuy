@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Header */
+  header {
+    background-color: #FFCC99;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+  }
+
+  header .logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  header p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* Navigasi */
+  nav {
+    background-color: #005ea8;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    position: relative;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav ul li a:hover {
+    background-color: #007acc;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 10;
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #005ea8;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Tombol Toggle Menu (Mobile) */
+  #menu-toggle {
+    display: none;
+    background-color: #005ea8;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    #nav-menu.hidden {
+      display: flex;
+    }
+
+    nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .dropdown-menu {
+      position: static;
+      display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
